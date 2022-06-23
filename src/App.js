@@ -9,7 +9,6 @@ import FormSignup from './components/pages/FormSignup';
 import LoginForm from './components/pages/LoginForm';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Mail from './components/pages/Mail';
-import { CarContext } from '../src/CarContext/CarContext';
 import {DataProvider} from './components/pages/Context';
 import { Section } from './components/pages/Section';
 import Cars from './components/pages/Cars';
