@@ -3,16 +3,13 @@ import { Link } from 'react-router-dom';
 import RegisterForm from '../pages/RegisterForm';
 import LoginBackground from "../../assets/LoginBackground.jpg";
 import '../styled/Register.css';
+import Login from './Login';
 
 
 function Register() {
   const adminUser = {
     email: "ecrin@admin.com",
-    password: "ecrin1234",
-   
-
-    email:"ali@gmail.com",
-    password:"ali123",
+    password: "ecrin1234"
    
   }
 
@@ -52,7 +49,7 @@ function Register() {
             </Link>
           </div>
         ) : (
-          <RegisterForm Register={Register} error={error}/>
+          <RegisterForm Login={Login} error={error}/>
         )}
         </div>
        </div>
