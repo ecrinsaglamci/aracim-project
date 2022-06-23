@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 function LoginForm({Login,error}) {
     const [details, setDetails] = useState({name: "", email: "", password: "" });
     const submitHandler = e => {
@@ -10,7 +9,6 @@ function LoginForm({Login,error}) {
   return (
     <form onSubmit={submitHandler} className="form-login">
         <div className='form-inner'>
-        
             <h2>Giriş</h2>
             {(error !== "") ? ( <div className='error'>{error}</div> ): ""}
             <div className='form-group'>
@@ -31,4 +29,4 @@ function LoginForm({Login,error}) {
   )
 }
 
-export default LoginForm;
+export default LoginForm

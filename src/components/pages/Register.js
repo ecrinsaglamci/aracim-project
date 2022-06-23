@@ -9,9 +9,11 @@ function Register() {
   const adminUser = {
     email: "ecrin@admin.com",
     password: "ecrin1234",
+   
 
     email:"ali@gmail.com",
-    password:"ali123"
+    password:"ali123",
+   
   }
 
   const[user, setUser] = useState({name: "", email: ""});
@@ -19,7 +21,7 @@ function Register() {
 
   const Register = details => {
     console.log(details);
-    if(details.email == adminUser.email && details.password == adminUser.password ) {
+    if(details.email == adminUser.email && details.password == adminUser.password  ) {
       console.log("Kayıt başarıyla tamamlandı");
       setUser({
         name: details.name,
@@ -30,7 +32,10 @@ function Register() {
       setError("Bilgiler eşleşmiyor!")
     }
   }
-
+  const Logout = () => {
+    setUser ({name: "", email: ""});
+    console.log("Çıkış Yapıldı");
+  }
   
   return (
     

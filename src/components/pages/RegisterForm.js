@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function RegisterForm({Register,error}) {
-    const [details, setDetails] = useState({name: "", email: "", password: "" });
+    const [details, setDetails] = useState({name: "", email: "", password: "" , password2:""});
     const submitHandler = e => {
        e.preventDefault(); 
        Register(details);
@@ -24,10 +24,10 @@ function RegisterForm({Register,error}) {
                 <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>
             </div>
             <div className='form-group'>
-                <label htmlFor='password'>Confirm Password:</label>
-                <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>
+                <label htmlFor='password2'>Confirm Password:</label>
+                <input type='password' name='password2' id='password2' onChange={e => setDetails({...details, password2: e.target.value})} value={details.password2}></input>
             </div>
-            <input type="submit" value="LOGIN"/>
+            <input type="submit" value="REGISTER"/>
         </div>
     </form>
   )
