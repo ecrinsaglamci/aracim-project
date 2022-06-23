@@ -16,7 +16,7 @@ function Register() {
   const[user, setUser] = useState({name: "", email: ""});
   const[error, setError]= useState("");
 
-  const Register = details => {
+  const Login = details => {
     console.log(details);
     if(details.email == adminUser.email && details.password == adminUser.password  ) {
       console.log("Kayıt başarıyla tamamlandı");
@@ -37,7 +37,6 @@ function Register() {
   return (
     
     <div className='register' >
-      
       <div className='overlay'>
       <img src= {LoginBackground}/>
       <div className='giris'>
@@ -49,7 +48,7 @@ function Register() {
             </Link>
           </div>
         ) : (
-          <RegisterForm Login={Login} error={error}/>
+          <RegisterForm Register={Login} error={error}/>
         )}
         </div>
        </div>
