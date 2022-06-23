@@ -1,17 +1,15 @@
 import React, {useState} from 'react';
 
-
-function LoginForm({Login,error}) {
+function RegisterForm({Register,error}) {
     const [details, setDetails] = useState({name: "", email: "", password: "" });
     const submitHandler = e => {
        e.preventDefault(); 
-       Login(details);
+       Register(details);
     }
   return (
-    <form onSubmit={submitHandler} className="form-login">
+    <form onSubmit={submitHandler} className="form-register">
         <div className='form-inner'>
-        
-            <h2>Giriş</h2>
+            <h2>Kayıt Ol</h2>
             {(error !== "") ? ( <div className='error'>{error}</div> ): ""}
             <div className='form-group'>
                 <label htmlFor='name'>Name:</label>
@@ -25,10 +23,14 @@ function LoginForm({Login,error}) {
                 <label htmlFor='password'>Password:</label>
                 <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>
             </div>
+            <div className='form-group'>
+                <label htmlFor='password'>Confirm Password:</label>
+                <input type="password" name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password}></input>
+            </div>
             <input type="submit" value="LOGIN"/>
         </div>
     </form>
   )
 }
 
-export default LoginForm;
+export default RegisterForm;

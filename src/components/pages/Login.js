@@ -32,11 +32,6 @@ function Login() {
     }
   }
 
-  const Logout = () => {
-    setUser ({name: "", email: ""});
-    console.log("Çıkış Yapıldı");
-  }
-
   return (
     
     <div className='login' >
