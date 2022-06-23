@@ -1,8 +1,13 @@
-.cars{
+#car{
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.content{
+    padding: 10px;
+    min-height: 40px;
+    overflow: hidden;
 }
 .card{
     min-width: 300px;
@@ -24,6 +29,7 @@
     max-height: 300px;
     display: block;
     object-fit: cover;
+    
 }
 .card h3{
     text-transform: uppercase;

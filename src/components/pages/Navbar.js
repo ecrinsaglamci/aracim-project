@@ -9,10 +9,10 @@ const Navbar = () => {
     <div>
     <div className="Navbar">
       <span className="nav-logo" >
-        <img src={logo} alt='logo'></img>
+        
           Aracim.com</span>
       <div className={`nav-items ${isOpen && "open"}`}>
-        
+
         <a href="/cars">İlanlar</a>
         <a href="/form">İlan Ekle</a>
         

@@ -24,6 +24,7 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 // const ExpandMore = styled((props) => {
 //     const { expand, ...other } = props;
 //     return <IconButton {...other} />;
@@ -54,7 +55,7 @@
 //         setExpanded(!expanded);
 //     };
 //     React.useEffect(() => {
-//         let carListe = carList.filter((x) => x.brand.includes(model) && x.color.includes(color));
+//         let carListe = carListt.filter((x) => x.brand.includes(model) && x.color.includes(color));
 //         setCarListt(carListe);
 //         console.log(carListt, "yeni")
 //     }, [color, model])

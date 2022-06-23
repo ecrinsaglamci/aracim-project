@@ -1,39 +1,51 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import {DataContext} from '../pages/Context';
-import Navbar from './Navbar';
+ import React, {Component} from 'react';
+ import {Link} from 'react-router-dom';
+ import {DataContext} from '../pages/Context';
+ import Navbar from './Navbar';
 
 
 export class Cars extends Component {
-    
-    static contextType = DataContext;
+     
+     static contextType = DataContext;
 
-    render() {
-        const {cars} = this.context;
+     render() {
+        
+         const {cars} = this.context;
         return (
-          <div>
-            <Navbar/>
-            <div id="cars">
+           <div>
+             <Navbar/>
+            <div id="car">
                 
-                {
-                    cars.map(cars => (
-                        <div className="card" key={cars._id}>
-                            <Link to={'/cars/${cars._id}'}>
-                                <img src={cars.src} alt=""></img>
-                            </Link>
-                            <div className="content">
-                                <h3>
-                                    <Link to={'/cars/${cars._id}'}>{cars.ilanadi}</Link>
-                                </h3>
-
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-            </div>
+                 {
+                     cars.map(car => (
+                         <div className="card" key={car._id}>
+                            <ul>
+                             <li><Link to={'/car/${car._id}'}>
+                                 <img src={car.src} alt=""></img>
+                             </Link></li>
+                             </ul>
+                             <div className="content">
+                                
+                                <p>{car.ilanadi}</p>
+                                <p>{car.marka}</p>
+                                <p>{car.fiyat}</p>
+                                <p>{car.bulunduguyer}</p>
+                                <p>{car.seri}</p>
+                                <p>{car.model}</p>
+                                <p>{car.yıl}</p>
+                                <p>{car.yakıt}</p>
+                                <p>{car.vites}</p>
+                                <p>{car.km}</p>
+                                <p>{car.renk}</p>
+                                <p>{car.aciklama}</p>
+                             </div>
+                         </div>
+                     ))
+                 }
+             </div>
+             </div>
           
-        )
-    }
-}
-export default Cars;
+         )
+     }
+ }
+ export default Cars;
